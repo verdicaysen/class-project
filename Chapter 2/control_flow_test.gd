@@ -1,0 +1,23 @@
+extends Node2D
+
+func _ready() -> void:
+	var score: int = 5
+	var number_of_lives: int = 3
+	var status: bool = false
+	if score >= 50:
+		print("You're great!")
+	else:
+		print("You suck!")
+
+	if number_of_lives < 0: 
+		print("You died!")
+	elif number_of_lives <= 1:
+		print("You could die with only one blow!")
+	elif number_of_lives <= 3:
+		print("You don't have a lot of lives left.")
+	else:
+		print("You LIVE!")
+
+	if number_of_lives <= 3 and score <= 50:
+		status = true
+		print(status)
