@@ -4,6 +4,7 @@ func _ready() -> void:
 	var score: int = 5
 	var number_of_lives: int = 3
 	var status: bool = false
+
 	if score >= 50:
 		print("You're great!")
 	else:
@@ -21,3 +22,21 @@ func _ready() -> void:
 	if number_of_lives <= 3 and score <= 50:
 		status = true
 		print(status)
+
+	var damage_type: String = "fire"
+	match damage_type:
+		"fire":
+			print("Welcome to the barbeque!")
+		"water":
+			print("You are drowning!")
+		"ice":
+			print("You're cold!")
+	
+	var amount_of_damage
+	if damage_type == "fire":
+		amount_of_damage = 5
+		print(amount_of_damage)
+	else:
+		amount_of_damage = 1
+		print(amount_of_damage)
+	

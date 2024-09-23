@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://hp8o26doqees"]
+
+[ext_resource type="Script" path="res://Chapter 2/PotionShop/potion_shop.gd" id="1_hg3kt"]
+
+[node name="PotionShop" type="Node2D"]
+script = ExtResource("1_hg3kt")
