@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5lry1jm3voys"]
+
+[ext_resource type="Script" path="res://Chapter 3/data_structs.gd" id="1_41te7"]
+
+[node name="DataStructs" type="Node"]
+script = ExtResource("1_41te7")
