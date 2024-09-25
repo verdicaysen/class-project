@@ -66,3 +66,41 @@ func _ready() -> void:
 	print(item)
 	item["price"] += 10
 	print(item["price"])
+	
+	# We can add a new key value pair to the Dictionary.
+	item["strength"] = 10
+	print(item["strength"])
+	
+	# We can use the has to find something within an array.
+	if item.has("strength"):
+		print(item.strength)
+	
+	# Let's loop through the dictionary and print each key pair.
+	for key in item:
+		print(key, " is ", item[key])
+		
+	# Let's loop through the dictionary and print each value.
+	for value in item.values():
+		print(value)
+		
+	var tissa_inventory = [
+		{
+			"name": "Boots",
+			"price": 5,
+		},
+		{
+			"name": "Boxing Gloves",
+			"price": 2,
+		},
+		{
+			"name": "Combustion Card",
+			"price": 20,
+		}
+	]
+	
+	# Creating nested loops with the Dictionar. A loop within a loop. 
+	for item_index in tissa_inventory.size():
+		print("Stats of item ", item_index, ":")
+		var items = tissa_inventory[item_index]
+		for key in items:
+			print(key, item[key])
