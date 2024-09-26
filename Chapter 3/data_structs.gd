@@ -83,7 +83,8 @@ func _ready() -> void:
 	for value in item.values():
 		print(value)
 		
-	var tissa_inventory = [
+	# Nested dictionaries inside of an array.
+	var tissa_inventory: Array = [
 		{
 			"name": "Boots",
 			"price": 5,
@@ -104,3 +105,27 @@ func _ready() -> void:
 		var items = tissa_inventory[item_index]
 		for key in items:
 			print(key, item[key])
+	
+	# Declaring most expensive item slot, then highest price initialized at 0. Loop through Tissa's inventory and find the highest price, then set it and most expesnive item. Then print the one that ends up the highest.
+	var most_expensive_item = {}
+	var highest_price = 0
+	for tissa_items in tissa_inventory:
+		if tissa_items["price"] > highest_price:
+			highest_price = tissa_items["price"]
+			most_expensive_item = tissa_items
+	print("Most expensive item: %s, Price: %d" % [most_expensive_item["name"], most_expensive_item["price"]])
+	
+	# My way using keys versus specifically naming the array itself. 
+	for tissa_items in tissa_inventory:
+		for key in tissa_items.keys():
+			if key == "price" and tissa_items[key] > highest_price:
+				highest_price = tissa_items[key]
+				most_expensive_item = tissa_items
+	print("Most expensive item: %s, Price: %d" % [most_expensive_item["name"], most_expensive_item["price"]])
+	
+	# Welcome to the palindrome test. Yay...?
+	var race_car: String = "racecar"
+	var race_car_flipped = race_car.reverse()
+	
+	if race_car == race_car_flipped:
+		print("This is a palindrome.")
