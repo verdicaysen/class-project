@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwp6tlxnu063u"]
+
+[ext_resource type="Script" path="res://Chapter 4/funcs_classes_methods.gd" id="1_ja6uv"]
+
+[node name="FuncsClassesMethods" type="Node"]
+script = ExtResource("1_ja6uv")

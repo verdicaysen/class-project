@@ -10,6 +10,7 @@ func _ready() -> void:
 	else:
 		print("You suck!")
 
+# Else if ternary statement.
 	if number_of_lives < 0: 
 		print("You died!")
 	elif number_of_lives <= 1:
@@ -23,6 +24,7 @@ func _ready() -> void:
 		status = true
 		print(status)
 
+# Match statement with different outcomes based on damage type.
 	var damage_type: String = "fire"
 	match damage_type:
 		"fire":
